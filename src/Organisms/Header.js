@@ -36,6 +36,7 @@ export default function Header() {
                         </Col>
                         <Col className="col-lg-4 right-header text-center text-lg-end">
                             <ul className="list-inline">
+                                <li className="list-inline-item"><a href="https://www.programmelab.com/" className="knowledge-base-link" target="_blank">{__('Knowledge Base', 'ultimate-quick-view-for-woocommerce')}</a></li>
                                 <li className="list-inline-item"><a href="https://www.programmelab.com/" className="leanrmore-link" target="_blank">{__('Learn More', 'ultimate-quick-view-for-woocommerce')}</a></li>
                                 <li className="list-inline-item">
                                     <a href="#" className="review-link">

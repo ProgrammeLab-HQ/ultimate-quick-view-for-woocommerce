@@ -81,6 +81,8 @@ class Ultimate_Quick_View_For_Woocommerce_Admin
 
 			wp_enqueue_style($this->plugin_name . '-bootstrap.min', ULTIMATE_QUICK_VIEW_FOR_WOOCOMMERCE_PATH . 'assets/css/bootstrap.min.css', array(), $this->version, 'all');
 			wp_enqueue_style($this->plugin_name . '-hint-css', ULTIMATE_QUICK_VIEW_FOR_WOOCOMMERCE_PATH . 'assets/plugins/cool-hint-css/src/hint.css', array(), $this->version, 'all');
+			wp_enqueue_style($this->plugin_name . '-roboto-css', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', array(), $this->version, 'all');
+
 			wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/ultimate-quick-view-for-woocommerce-admin.css', array(), $this->version, 'all');
 		}
 	}
@@ -339,5 +341,89 @@ class Ultimate_Quick_View_For_Woocommerce_Admin
 			remove_all_actions('user_admin_notices');
 			remove_all_actions('admin_notices');
 		}
+	}
+
+	/*
+	* Add custom routes to the Rest API
+	*
+	* @since    1.0.0
+	*/
+	public function ultimate_quick_view_for_woocommerce_rest_api_register_route()
+	{
+
+		//Add the GET 'ultimate_quick_view_for_woocommerce/v1/options' endpoint to the Rest API
+		register_rest_route(
+			'ultimate_quick_view_for_woocommerce/v1',
+			'/options',
+			array(
+				'methods'  => 'GET',
+				'callback' => [$this, 'rest_api_ultimate_quick_view_for_woocommerce_read_options_callback'],
+				'permission_callback' => '__return_true'
+			)
+		);
+
+		//Add the POST 'ultimate_quick_view_for_woocommerce/v1/options' endpoint to the Rest API
+		register_rest_route(
+			'ultimate_quick_view_for_woocommerce/v1',
+			'/options',
+			array(
+				'methods'             => 'POST',
+				'callback'            => [$this, 'rest_api_ultimate_quick_view_for_woocommerce_update_options_callback'],
+				'permission_callback' => '__return_true'
+			)
+		);
+	}
+	/*
+	* Callback for the GET 'ultimate_quick_view_for_woocommerce/v1/options' endpoint of the Rest API
+	*/
+	public function rest_api_ultimate_quick_view_for_woocommerce_read_options_callback($data)
+	{
+
+		//Check the capability
+		if (!current_user_can('manage_options')) {
+			return new WP_Error(
+				'rest_read_error',
+				'Sorry, you are not allowed to view the options.',
+				array('status' => 403)
+			);
+		}
+
+		//Generate the response
+		$response = [];
+		// $response['plugin_option_1'] = get_option('plugin_option_1');
+		// $response['plugin_option_2'] = get_option('plugin_option_2');
+		$response['programmelab_ultimate_quick_view_for_woocommerce'] = get_option('programmelab_ultimate_quick_view_for_woocommerce', []);
+
+
+		//Prepare the response
+		$response = new WP_REST_Response($response);
+
+		return $response;
+	}
+	public function rest_api_ultimate_quick_view_for_woocommerce_update_options_callback($request)
+	{
+
+		if (!current_user_can('manage_options')) {
+			return new WP_Error(
+				'rest_update_error',
+				'Sorry, you are not allowed to update the DAEXT UI Test options.',
+				array('status' => 403)
+			);
+		}
+
+		//Get the data and sanitize
+		//Note: In a real-world scenario, the sanitization function should be based on the option type.
+		$plugin_option_1 = sanitize_text_field($request->get_param('plugin_option_1'));
+		$plugin_option_2 = sanitize_text_field($request->get_param('plugin_option_2'));
+		$programmelab_ultimate_quick_view_for_woocommerce = $request->get_param('programmelab_ultimate_quick_view_for_woocommerce');
+
+		//Update the options
+		update_option('plugin_option_1', $plugin_option_1);
+		update_option('plugin_option_2', $plugin_option_2);
+		update_option('programmelab_ultimate_quick_view_for_woocommerce', $programmelab_ultimate_quick_view_for_woocommerce);
+
+		$response = new WP_REST_Response('Data successfully added.', '200');
+
+		return $response;
 	}
 }

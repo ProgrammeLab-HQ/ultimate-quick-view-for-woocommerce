@@ -172,6 +172,8 @@ class Ultimate_Quick_View_For_Woocommerce
 			$this->loader->add_action('admin_init', $plugin_admin, 'ultimate_quick_view_for_woocommerce_do_activation_redirect');
 
 			$this->loader->add_action('current_screen', $plugin_admin, 'ultimate_quick_view_for_woocommerce_hide_admin_notices');
+
+			$this->loader->add_action('rest_api_init', $plugin_admin, 'ultimate_quick_view_for_woocommerce_rest_api_register_route');
 		} else {
 			$this->loader->add_action('admin_notices', $plugin_admin, 'ultimate_quick_view_for_woocommerce_woo_check');
 			add_action("wp_ajax_ultimate_quick_view_for_woocommerce_ajax_install_plugin", "wp_ajax_install_plugin");
@@ -192,6 +194,10 @@ class Ultimate_Quick_View_For_Woocommerce
 		if (is_plugin_active('woocommerce/woocommerce.php')) {
 			$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
 			$this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
+
+			$this->loader->add_action('wp_ajax_prefix_ultimate_quick_view_for_woocommerce_get_product_details', $plugin_public, 'ultimate_quick_view_for_woocommerce_get_product_details');
+			$this->loader->add_action('wp_ajax_nopriv_prefix_ultimate_quick_view_for_woocommerce_get_product_details', $plugin_public, 'ultimate_quick_view_for_woocommerce_get_product_details');
+			$this->loader->add_action('init', $plugin_public, 'ultimate_quick_view_for_woocommerce_customize_woo_hooks');
 		}
 	}
 

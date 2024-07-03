@@ -1,4 +1,79 @@
-/**
- * All of the CSS for your public-facing functionality should be
- * included in this file.
- */
+.products .product .woocommerce-loop-product__thumbnail-wrapper,
+.products-block-post-template .product .woocommerce-loop-product__thumbnail-wrapper {
+  position: relative;
+  display: block;
+}
+.products .product .woocommerce-loop-product__thumbnail-wrapper .onsale,
+.products-block-post-template .product .woocommerce-loop-product__thumbnail-wrapper .onsale {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.products .product .woocommerce-loop-product__thumbnail-wrapper .programmelab-fancybox-gallery,
+.products-block-post-template .product .woocommerce-loop-product__thumbnail-wrapper .programmelab-fancybox-gallery {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+.products .product .woocommerce-loop-product__thumbnail-wrapper .programmelab-fancybox-gallery img,
+.products-block-post-template .product .woocommerce-loop-product__thumbnail-wrapper .programmelab-fancybox-gallery img {
+  margin-bottom: 0;
+}
+.products .product .woocommerce-loop-product__thumbnail-wrapper .programmelab-fancybox-gallery span,
+.products-block-post-template .product .woocommerce-loop-product__thumbnail-wrapper .programmelab-fancybox-gallery span {
+  cursor: pointer;
+  display: none;
+  width: 56px;
+  height: 56px;
+  background-image: url("../images/zoom.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
+  overflow: hidden;
+  vertical-align: top;
+}
+.products .product .woocommerce-loop-product__thumbnail-wrapper .programmelab-fancybox-gallery span:first-child,
+.products-block-post-template .product .woocommerce-loop-product__thumbnail-wrapper .programmelab-fancybox-gallery span:first-child {
+  display: inline-block;
+}
+.products .product .programmelab-quickview-opener-wrapper,
+.products-block-post-template .product .programmelab-quickview-opener-wrapper {
+  margin-bottom: 5px;
+}
+
+.programmelab-quickview-dialog.modal {
+  max-width: 1000px;
+  padding: 25px;
+}
+.programmelab-quickview-dialog.modal .quickview-full-details-button {
+  width: 100%;
+  text-align: center;
+}
+.programmelab-quickview-dialog.modal .quickview-cart-button-wrap {
+  margin-bottom: 1.618em;
+  padding: 1em 0;
+}
+.programmelab-quickview-dialog.modal .woocommerce-product-gallery {
+  margin-bottom: 0 !important;
+}
+.programmelab-quickview-dialog.modal .flex-control-thumbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.programmelab-quickview-dialog.modal .flex-control-thumbs li {
+  margin-bottom: 0 !important;
+}
+.programmelab-quickview-dialog.modal .flex-control-thumbs li img {
+  width: 100%;
+  height: auto;
+}
+.programmelab-quickview-dialog.modal .flex-control-thumbs li.active img {
+  opacity: 1 !important;
+}
+.programmelab-quickview-dialog.modal .flex-control-thumbs::before {
+  display: none !important;
+}/*# sourceMappingURL=ultimate-quick-view-for-woocommerce-public.css.map */

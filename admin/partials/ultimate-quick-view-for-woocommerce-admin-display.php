@@ -4,6 +4,6 @@ if (!defined('WPINC')) die;
 ?>
 <div class="ultimate-quick-view-for-woocommerce-settings-wrapper">
     <div class="ultimate-quick-view-for-woocommerce-settings-container">
-        <div id="ultimate-quick-view-for-woocommerce-settings">Loading</div>
+        <div id="ultimate-quick-view-for-woocommerce-settings"></div>
     </div>
 </div>

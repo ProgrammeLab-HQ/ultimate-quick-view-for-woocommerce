@@ -1,0 +1,78 @@
+.products,
+.products-block-post-template {
+  .product {
+    .woocommerce-loop-product__thumbnail-wrapper {
+      position: relative;
+      display: block;
+      .onsale {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+      }
+      .programmelab-fancybox-gallery {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        img {
+          margin-bottom: 0;
+        }
+        span {
+          cursor: pointer;
+          display: none;
+          width: 56px;
+          height: 56px;
+          background-image: url("../images/zoom.png");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          text-indent: -9999px;
+          overflow: hidden;
+          vertical-align: top;
+          &:first-child {
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .programmelab-quickview-opener-wrapper {
+      margin-bottom: 5px;
+    }
+  }
+}
+.programmelab-quickview-dialog.modal {
+  max-width: 1000px;
+  padding: 25px;
+  .quickview-full-details-button {
+    width: 100%;
+    text-align: center;
+  }
+  .quickview-cart-button-wrap {
+    margin-bottom: 1.618em;
+    padding: 1em 0;
+  }
+  .woocommerce-product-gallery {
+    margin-bottom: 0 !important;
+  }
+  .flex-control-thumbs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    li {
+      margin-bottom: 0 !important;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &.active {
+        img {
+          opacity: 1 !important;
+        }
+      }
+    }
+    &::before {
+      display: none !important;
+    }
+  }
+}
