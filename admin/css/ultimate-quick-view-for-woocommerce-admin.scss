@@ -513,6 +513,17 @@ $dark_blue_color: #002e73;
               }
             }
           }
+          .select-setting-unit {
+            .select-unit {
+              div[class$="multiValue"] {
+                background-color: #e6f0ff;
+                // color: #757575;
+                // font-size: 12px;
+                // font-weight: 400;
+                // line-height: 14px;
+              }
+            }
+          }
           &.ultimate-quick-view-for-woocommerce-setting-sub-unit {
             margin-left: 24px;
             margin-right: 24px;

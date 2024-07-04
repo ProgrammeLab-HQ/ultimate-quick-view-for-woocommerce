@@ -1,0 +1,60 @@
+# Directories to exclude
+.deploy/
+.distignore
+.DS_Store
+.editorconfig
+.git/
+.github/
+.gitignore
+.gitmodules
+bin/
+node_modules/
+tests/
+docs/
+documentation/
+
+# Files to exclude
+*.sql
+*.tar.gz
+*.zip
+composer.json
+composer.lock
+Gruntfile.js
+package.json
+phpcs.xml.dist
+phpcs.ruleset.xml
+phpstan.neon.dist
+phpunit.xml
+phpunit.xml.dist
+README.md
+Thumbs.db
+wp-cli.local.yml
+
+# Log files
+*.log
+
+# Build artifacts
+*.build.js
+
+# Code quality and configuration files
+.eslintrc.js
+.stylelintrc
+.huskyrc
+.prettierrc
+
+# Temporary and backup files
+*~
+*.swp
+*.bak
+*.backup
+
+# System and environment files
+.idea/
+.vscode/
+.env
+
+# Exclude WordPress-specific files not needed in distribution
+wp-config.php
+wp-config-sample.php
+license.txt
+readme.html

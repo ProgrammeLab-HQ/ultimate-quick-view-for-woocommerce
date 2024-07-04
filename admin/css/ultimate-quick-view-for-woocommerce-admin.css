@@ -442,6 +442,9 @@
   justify-content: flex-start;
   gap: 32px;
 }
+.ultimate-quick-view-for-woocommerce-settings-template .settings-box .options-area .options .ultimate-quick-view-for-woocommerce-setting-unit .select-setting-unit .select-unit div[class$=multiValue] {
+  background-color: #e6f0ff;
+}
 .ultimate-quick-view-for-woocommerce-settings-template .settings-box .options-area .options .ultimate-quick-view-for-woocommerce-setting-unit.ultimate-quick-view-for-woocommerce-setting-sub-unit {
   margin-left: 24px;
   margin-right: 24px;

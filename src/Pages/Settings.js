@@ -3,13 +3,17 @@
 // const useEffect = wp.element.useState;
 // const useState = wp.element.useState;
 // import Logo from '../assets/images/logo.svg';
-import { Button, Notice, RadioControl } from '@wordpress/components';
+// import { Button, Notice, RadioControl } from '@wordpress/components';
+import { Notice, RadioControl } from '@wordpress/components';
 import { useEffect, useState } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Select from 'react-select';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const nonce = document.getElementById('nonce-field');
 export default function Settings(props) {
 
@@ -66,7 +70,7 @@ export default function Settings(props) {
             setLoading(false);
         }
     }, [options]);
-
+    // const notify = () => toast("Wow so easy!");
     const updateField = (path, value) => {
         const keys = path.split('.');
         let tempData = { ...options };
@@ -81,23 +85,37 @@ export default function Settings(props) {
         }, tempData);
 
         setOptions(tempData);
+        // console.log(tempData);
 
-        // console.log(options);
-
-        /*wp.apiFetch({
+        wp.apiFetch({
             path: '/ultimate_quick_view_for_woocommerce/v1/options',
             method: 'POST',
             data: {
-                'programmelab_ultimate_quick_view_for_woocommerce': options
+                'programmelab_ultimate_quick_view_for_woocommerce': tempData
             },
         }).then(data => {
-            console.log('Options saved successfully!');
-        });*/
+            // alert('Options saved successfully!');            
+            const toastId = 'uqvfw-toast-id';
+            if (!toast.isActive(toastId)) {
+                toast.success(__("Changes applied successfully.", 'ultimate-quick-view-for-woocommerce'), {
+                    toastId,
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    // transition: Bounce,
+                });
+            }
+        });
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(options);
+        // console.log(options);
         wp.apiFetch({
             path: '/ultimate_quick_view_for_woocommerce/v1/options',
             method: 'POST',
@@ -105,7 +123,22 @@ export default function Settings(props) {
                 'programmelab_ultimate_quick_view_for_woocommerce': options
             },
         }).then(data => {
-            alert('Options saved successfully!');
+            // alert('Options saved successfully!');            
+            const toastId = 'uqvfw-toast-id';
+            if (!toast.isActive(toastId)) {
+                toast.success(__("Changes applied successfully.", 'ultimate-quick-view-for-woocommerce'), {
+                    toastId,
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    // transition: Bounce,
+                });
+            }
         });
     };
     const ALLOWED_MEDIA_TYPES = ['image'];
@@ -120,6 +153,7 @@ export default function Settings(props) {
     };
     return (
         <section className="settings-page-wrap">
+            <ToastContainer />
             <Container fluid="fluid">
                 <div className="content-part">
                     <Row className="justify-content-lg-center">
@@ -303,11 +337,11 @@ export default function Settings(props) {
                                                 
                                             </div>                                      
                                             
-                                            <div className="save-button mt-auto">
+                                            {/* <div className="save-button mt-auto">
                                                 <Button isPrimary type="submit" className="button button-primary">
                                                 {__('Save settings', 'ultimate-quick-view-for-woocommerce')}
                                                 </Button>
-                                            </div>
+                                            </div> */}
                                         
                                         </form>
                                         </>
