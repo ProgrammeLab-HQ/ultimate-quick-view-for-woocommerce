@@ -7460,7 +7460,7 @@ function Footer() {
     className: "col-lg-8 text-center text-lg-start mb-2 mb-lg-0 "
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     dangerouslySetInnerHTML: {
-      __html: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enjoyed ', 'ultimate-quick-view-for-woocommerce') + ' <strong>"' + _data_json__WEBPACK_IMPORTED_MODULE_2__.name + '"</strong>' + (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('? Please leave us a rating. We really appreciate your support!', 'ultimate-quick-view-for-woocommerce')
+      __html: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enjoyed ', 'ultimate-quick-view-for-woocommerce') + ' <strong>"' + _data_json__WEBPACK_IMPORTED_MODULE_2__.name + '"</strong>' + (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('? Please leave us a ', 'ultimate-quick-view-for-woocommerce') + '<a href="#">' + (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('rating', 'ultimate-quick-view-for-woocommerce') + '</a>' + (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('. We really appreciate your support!', 'ultimate-quick-view-for-woocommerce')
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
     className: "col-lg-4 text-center text-lg-end"
