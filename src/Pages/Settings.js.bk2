@@ -14,14 +14,14 @@ const Settings = () => {
          * Initialize the options fields with the data received from the REST API
          * endpoint provided by the plugin.
          */
-        wp.apiFetch({path: '/store_banner/v1/options'}).
+        wp.apiFetch({path: '/ultimate_quick_view_for_woocommerce/v1/options'}).
         then(data => {
                 console.log(data);
                 // let options = {};
                 //Set the new values of the options in the state
                 // setOption1(data['plugin_option_1'])
                 // setOption2(data['plugin_option_2'])
-                setOptions(data['programmelab_store_banner'])
+                setOptions(data['programmelab_ultimate_quick_view_for_woocommerce'])
             },
         );
     }, []);
@@ -104,10 +104,10 @@ const Settings = () => {
         event.preventDefault();
         // console.log(options);
         wp.apiFetch({
-            path: '/store_banner/v1/options',
+            path: '/ultimate_quick_view_for_woocommerce/v1/options',
             method: 'POST',
             data: {
-                'programmelab_store_banner': options
+                'programmelab_ultimate_quick_view_for_woocommerce': options
             },
         }).then(data => {
             alert('Options saved successfully!');
@@ -169,7 +169,7 @@ const Settings = () => {
                                                                     <span className="hints-css hint--bottom" aria-label="Enable banner option for shop page."><i className="dashicons dashicons-editor-help"></i></span>
                                                                 </label>
                                                             </div>
-                                                            <div className="position-relative store_banner_image">
+                                                            <div className="position-relative ultimate_quick_view_for_woocommerce_image">
                                                                 <div className="image-uploader">
                                                                     <div
                                                                         className={
@@ -186,7 +186,7 @@ const Settings = () => {
                                                                                 <img src={options._shop_page_banner_internal_image.thumbnail} className="option-image" />
                                                                             </span>
                                                                             <span 
-                                                                                className="store-banner-remove-image" 
+                                                                                className="ultimate-quick-view-for-woocommerce-remove-image" 
                                                                                 data-base={noImageAvailable}
 
                                                                                 ></span>

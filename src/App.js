@@ -12,13 +12,13 @@ const App = () => (
     <div>
       <nav>
         <ul>
-          <li><Link to="?page=store-banner">Home</Link></li>
+          <li><Link to="?page=ultimate-quick-view-for-woocommerce">Home</Link></li>
           <li><Link to="/settings">Settings</Link></li>
           <li><Link to="/about">About</Link></li>
         </ul>
       </nav>
       <Routes>
-        <Route path="?page=store-banner" element={<Home />} />
+        <Route path="?page=ultimate-quick-view-for-woocommerce" element={<Home />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/about" element={<About />} />
       </Routes>
@@ -92,7 +92,7 @@ function LoadSettingsPages() {
         <ul>
           <li>
             <NavLink 
-            to="?page=store-banner"
+            to="?page=ultimate-quick-view-for-woocommerce"
             className={({ isActive, isPending, isTransitioning }) =>
               [
                 isPending ? "pending" : "",
@@ -104,7 +104,7 @@ function LoadSettingsPages() {
           </li>
           <li>
             <NavLink 
-            to="?page=store-banner&path=settings"
+            to="?page=ultimate-quick-view-for-woocommerce&path=settings"
             className={({ isActive, isPending, isTransitioning }) =>
               [
                 isPending ? "pending" : "",
@@ -116,7 +116,7 @@ function LoadSettingsPages() {
           </li>
           <li>
             <NavLink 
-            to="?page=store-banner&path=elements"
+            to="?page=ultimate-quick-view-for-woocommerce&path=elements"
             className={({ isActive, isPending, isTransitioning }) =>
               [
                 isPending ? "pending" : "",
@@ -128,7 +128,7 @@ function LoadSettingsPages() {
           </li>
           <li>
             <NavLink 
-            to="?page=store-banner&path=image"
+            to="?page=ultimate-quick-view-for-woocommerce&path=image"
             className={({ isActive, isPending, isTransitioning }) =>
               [
                 isPending ? "pending" : "",

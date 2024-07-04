@@ -316,7 +316,7 @@ export default function Settings(props) {
                                                     {
                                                         options?.quickview_category_for == 'specific' &&
                                                         <div className="select-setting-unit mt-3">
-                                                            <div className="position-relative select-unit">
+                                                            <div className="position-relative select-unit select-2-unit">
                                                                 <Select
                                                                     // id="my-select"
                                                                     // className="form-control"

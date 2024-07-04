@@ -434,8 +434,16 @@
   justify-content: flex-start;
   gap: 32px;
 }
-.ultimate-quick-view-for-woocommerce-settings-template .settings-box .options-area .options .ultimate-quick-view-for-woocommerce-setting-unit .select-setting-unit .select-unit div[class$=multiValue] {
+.ultimate-quick-view-for-woocommerce-settings-template .settings-box .options-area .options .ultimate-quick-view-for-woocommerce-setting-unit .select-setting-unit .select-unit.select-2-unit {
+  --space--bottom: 248px;
+  margin-bottom: var(--space--bottom);
+}
+.ultimate-quick-view-for-woocommerce-settings-template .settings-box .options-area .options .ultimate-quick-view-for-woocommerce-setting-unit .select-setting-unit .select-unit.select-2-unit div[class$=multiValue] {
   background-color: #e6f0ff;
+}
+.ultimate-quick-view-for-woocommerce-settings-template .settings-box .options-area .options .ultimate-quick-view-for-woocommerce-setting-unit .select-setting-unit .select-unit.select-2-unit div[class$=-menu] {
+  max-height: var(--space--bottom);
+  overflow-y: scroll;
 }
 .ultimate-quick-view-for-woocommerce-settings-template .settings-box .options-area .options .ultimate-quick-view-for-woocommerce-setting-unit.ultimate-quick-view-for-woocommerce-setting-sub-unit {
   margin-left: 24px;

@@ -516,12 +516,20 @@ $dark_blue_color: #002e73;
           }
           .select-setting-unit {
             .select-unit {
-              div[class$="multiValue"] {
-                background-color: #e6f0ff;
-                // color: #757575;
-                // font-size: 12px;
-                // font-weight: 400;
-                // line-height: 14px;
+              &.select-2-unit {
+                --space--bottom: 248px;
+                margin-bottom: var(--space--bottom);
+                div[class$="multiValue"] {
+                  background-color: #e6f0ff;
+                  // color: #757575;
+                  // font-size: 12px;
+                  // font-weight: 400;
+                  // line-height: 14px;
+                }
+                div[class$="-menu"] {
+                  max-height: var(--space--bottom);
+                  overflow-y: scroll;
+                }
               }
             }
           }

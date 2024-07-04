@@ -7136,13 +7136,13 @@ const App = () => (
     <div>
       <nav>
         <ul>
-          <li><Link to="?page=store-banner">Home</Link></li>
+          <li><Link to="?page=ultimate-quick-view-for-woocommerce">Home</Link></li>
           <li><Link to="/settings">Settings</Link></li>
           <li><Link to="/about">About</Link></li>
         </ul>
       </nav>
       <Routes>
-        <Route path="?page=store-banner" element={<Home />} />
+        <Route path="?page=ultimate-quick-view-for-woocommerce" element={<Home />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/about" element={<About />} />
       </Routes>
@@ -7212,7 +7212,7 @@ function LoadSettingsPages() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Pages_Home__WEBPACK_IMPORTED_MODULE_4__["default"], null);
   }
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.NavLink, {
-    to: "?page=store-banner",
+    to: "?page=ultimate-quick-view-for-woocommerce",
     className: function className(_ref) {
       var isActive = _ref.isActive,
         isPending = _ref.isPending,
@@ -7220,7 +7220,7 @@ function LoadSettingsPages() {
       return [isPending ? "pending" : "", isActive ? "current" : "", isTransitioning ? "transitioning" : ""].join(" ");
     }
   }, "Dashboard")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.NavLink, {
-    to: "?page=store-banner&path=settings",
+    to: "?page=ultimate-quick-view-for-woocommerce&path=settings",
     className: function className(_ref2) {
       var isActive = _ref2.isActive,
         isPending = _ref2.isPending,
@@ -7228,7 +7228,7 @@ function LoadSettingsPages() {
       return [isPending ? "pending" : "", isActive ? "current" : "", isTransitioning ? "transitioning" : ""].join(" ");
     }
   }, "Setting")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.NavLink, {
-    to: "?page=store-banner&path=elements",
+    to: "?page=ultimate-quick-view-for-woocommerce&path=elements",
     className: function className(_ref3) {
       var isActive = _ref3.isActive,
         isPending = _ref3.isPending,
@@ -7236,7 +7236,7 @@ function LoadSettingsPages() {
       return [isPending ? "pending" : "", isActive ? "current" : "", isTransitioning ? "transitioning" : ""].join(" ");
     }
   }, "Elements")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.NavLink, {
-    to: "?page=store-banner&path=image",
+    to: "?page=ultimate-quick-view-for-woocommerce&path=image",
     className: function className(_ref4) {
       var isActive = _ref4.isActive,
         isPending = _ref4.isPending,
@@ -7457,9 +7457,13 @@ function Footer() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "align-items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: "col-lg-6 text-center text-lg-start mb-2 mb-lg-0 "
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enjoyed', 'ultimate-quick-view-for-woocommerce'), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null, _data_json__WEBPACK_IMPORTED_MODULE_2__.name), "  ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('? Please leave us a rating. We really appreciate your support!', 'ultimate-quick-view-for-woocommerce')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: "col-lg-6 text-center text-lg-end"
+    className: "col-lg-8 text-center text-lg-start mb-2 mb-lg-0 "
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enjoyed ', 'ultimate-quick-view-for-woocommerce') + ' <strong>"' + _data_json__WEBPACK_IMPORTED_MODULE_2__.name + '"</strong>' + (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('? Please leave us a rating. We really appreciate your support!', 'ultimate-quick-view-for-woocommerce')
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: "col-lg-4 text-center text-lg-end"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("strong", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Version', 'ultimate-quick-view-for-woocommerce')), ":", _data_json__WEBPACK_IMPORTED_MODULE_2__.version, " "))));
 }
 
@@ -7694,15 +7698,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var _Molecules_Card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Molecules/Card */ "./src/Molecules/Card.js");
 /* harmony import */ var _assets_images_get_5_star_support_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/images/get-5-star-support.svg */ "./src/assets/images/get-5-star-support.svg");
 /* harmony import */ var _assets_images_join_the_community_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/images/join-the-community.svg */ "./src/assets/images/join-the-community.svg");
 /* harmony import */ var _assets_images_rate_us_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/images/rate-us.svg */ "./src/assets/images/rate-us.svg");
 /* harmony import */ var _assets_images_welcome_feature_image_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/images/welcome-feature-image.svg */ "./src/assets/images/welcome-feature-image.svg");
-/* harmony import */ var _assets_images_welcome_store_banner_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/images/welcome-store-banner.svg */ "./src/assets/images/welcome-store-banner.svg");
+/* harmony import */ var _assets_images_welcome_ultimate_quick_view_for_woocommerce_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/images/welcome-ultimate-quick-view-for-woocommerce.svg */ "./src/assets/images/welcome-ultimate-quick-view-for-woocommerce.svg");
+/* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../data.json */ "./src/data.json");
+
 
 
 
@@ -7715,11 +7721,11 @@ __webpack_require__.r(__webpack_exports__);
 function Home() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("section", {
     className: "settings-page-wrap"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
     fluid: "fluid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "content-part"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"], {
     className: "col-lg-8 left-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Molecules_Card__WEBPACK_IMPORTED_MODULE_2__["default"]
   // className="custom-class"      
@@ -7727,9 +7733,9 @@ function Home() {
     header: {
       imgBox: {
         className: 'gap-4',
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Welcome to Ultimate Quick View for WooCommerce', 'store-banner'),
-        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('We designed Ultimate Quick View for WooCommerce to be intuitive but we do recommend learning how it works by Checking our comprehensive documentation and watching the video below. Enjoy your time with Spectra!', 'store-banner'),
-        img: _assets_images_welcome_store_banner_svg__WEBPACK_IMPORTED_MODULE_7__["default"]
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Welcome to ', 'ultimate-quick-view-for-woocommerce') + '<strong>' + _data_json__WEBPACK_IMPORTED_MODULE_8__.name + '</strong>',
+        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('We designed', 'ultimate-quick-view-for-woocommerce') + ' <strong>"' + _data_json__WEBPACK_IMPORTED_MODULE_8__.name + '"</strong> ' + (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('to be intuitive but we recommend learning how it works by configuring the settings page to your requirements. Hope you enjoy our plugin, as much as we had making it!', 'ultimate-quick-view-for-woocommerce'),
+        img: _assets_images_welcome_ultimate_quick_view_for_woocommerce_svg__WEBPACK_IMPORTED_MODULE_7__["default"]
       }
     },
     body: {
@@ -7737,19 +7743,19 @@ function Home() {
     },
     footer: {
       cta: {
-        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enjoyed Ultimate Quick View for WooCommerce ? Please leave us a rating. We really appreciate your support!', 'store-banner'),
+        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enjoyed ', 'ultimate-quick-view-for-woocommerce') + _data_json__WEBPACK_IMPORTED_MODULE_8__.name + (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('? See our site for more similar products. Or head to the settings page.', 'ultimate-quick-view-for-woocommerce'),
         btn: [{
           'url': '?page=ultimate-quick-view-for-woocommerce&path=settings',
-          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'store-banner'),
+          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'ultimate-quick-view-for-woocommerce'),
           'className': 'theme-button-solid theme-button-solid-blue'
         }, {
           'url': 'https://www.programmelab.com/',
-          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Visit Our Website', 'store-banner'),
+          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Visit Our Website', 'ultimate-quick-view-for-woocommerce'),
           'target': '_blank'
         }]
       }
     }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["default"], {
     className: "col-lg-4 right-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Molecules_Card__WEBPACK_IMPORTED_MODULE_2__["default"]
   // className="custom-class"      
@@ -7757,12 +7763,12 @@ function Home() {
     body: {
       imgBox: {
         className: 'gap-3',
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get 5-star Support', 'store-banner'),
-        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Need some help? Our awesome support team is here to help you with any question you have.', 'store-banner'),
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get 5-star Support', 'ultimate-quick-view-for-woocommerce'),
+        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Need some help? Our awesome support team is here to help you with any question you have.', 'ultimate-quick-view-for-woocommerce'),
         img: _assets_images_get_5_star_support_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
         btn: [{
           'url': '#',
-          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get Support', 'store-banner')
+          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get Support', 'ultimate-quick-view-for-woocommerce')
         }]
       }
     }
@@ -7772,12 +7778,12 @@ function Home() {
     body: {
       imgBox: {
         className: 'gap-3',
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Join the Community', 'store-banner'),
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Join the Community', 'ultimate-quick-view-for-woocommerce'),
         content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Got a question about the plugin, want to share your awesome project or just say hi? Join our wonderful community!'),
         img: _assets_images_join_the_community_svg__WEBPACK_IMPORTED_MODULE_4__["default"],
         btn: [{
           'url': '#',
-          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get Support', 'store-banner')
+          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get Support', 'ultimate-quick-view-for-woocommerce')
         }]
       }
     }
@@ -7787,12 +7793,12 @@ function Home() {
     body: {
       imgBox: {
         className: 'gap-3',
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Rate Us', 'store-banner'),
-        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('We love to hear from you, we would appreciate your every single review.', 'store-banner'),
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Rate Us', 'ultimate-quick-view-for-woocommerce'),
+        content: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('We love to hear from you, we would appreciate your every single review.', 'ultimate-quick-view-for-woocommerce'),
         img: _assets_images_rate_us_svg__WEBPACK_IMPORTED_MODULE_5__["default"],
         btn: [{
           'url': '#',
-          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get Support', 'store-banner')
+          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Get Support', 'ultimate-quick-view-for-woocommerce')
         }]
       }
     }
@@ -8308,7 +8314,7 @@ function Settings(props) {
   }))), (options === null || options === void 0 ? void 0 : options.quickview_category_for) == 'specific' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("div", {
     className: "select-setting-unit mt-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("div", {
-    className: "position-relative select-unit"
+    className: "position-relative select-unit select-2-unit"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement(react_select__WEBPACK_IMPORTED_MODULE_9__["default"]
   // id="my-select"
   // className="form-control"
@@ -9375,10 +9381,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/assets/images/welcome-store-banner.svg":
-/*!****************************************************!*\
-  !*** ./src/assets/images/welcome-store-banner.svg ***!
-  \****************************************************/
+/***/ "./src/assets/images/welcome-ultimate-quick-view-for-woocommerce.svg":
+/*!***************************************************************************!*\
+  !*** ./src/assets/images/welcome-ultimate-quick-view-for-woocommerce.svg ***!
+  \***************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -9386,7 +9392,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/welcome-store-banner.svg");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/welcome-ultimate-quick-view-for-woocommerce.svg");
 
 /***/ }),
 

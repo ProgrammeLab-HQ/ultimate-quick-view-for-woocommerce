@@ -113,7 +113,7 @@ class Ultimate_Quick_View_For_Woocommerce_Admin
 			wp_enqueue_media();
 			$plugin_url  = plugin_dir_url(__DIR__);
 			wp_enqueue_script(
-				'react-store-banner',
+				'react-ultimate-quick-view-for-woocommerce',
 				$plugin_url . 'build/index.js',
 				array('wp-element', 'wp-components', 'wp-api-fetch', 'wp-i18n', 'wp-media-utils', 'wp-block-editor', 'react', 'react-dom'),
 				$this->version,
@@ -249,16 +249,16 @@ class Ultimate_Quick_View_For_Woocommerce_Admin
 		);
 		// add_submenu_page(
 		// 	$this->plugin_name,
-		// 	esc_html__('Welcome', 'store-banner'),
-		// 	esc_html__('Welcome', 'store-banner'),
+		// 	esc_html__('Welcome', 'ultimate-quick-view-for-woocommerce'),
+		// 	esc_html__('Welcome', 'ultimate-quick-view-for-woocommerce'),
 		// 	'manage_options',
 		// 	$this->plugin_name,
 		// 	array($this, 'ultimate_quick_view_for_woocommerce_dashboard_page_html')
 		// );
 		// add_submenu_page(
 		// 	$this->plugin_name,
-		// 	esc_html__('Settings', 'store-banner'),
-		// 	esc_html__('Settings', 'store-banner'),
+		// 	esc_html__('Settings', 'ultimate-quick-view-for-woocommerce'),
+		// 	esc_html__('Settings', 'ultimate-quick-view-for-woocommerce'),
 		// 	'manage_options',
 		// 	$this->plugin_name . '&path=settings',
 		// 	array($this, 'ultimate_quick_view_for_woocommerce_dashboard_page_html')
