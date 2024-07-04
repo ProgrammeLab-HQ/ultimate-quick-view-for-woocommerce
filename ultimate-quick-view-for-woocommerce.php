@@ -62,7 +62,7 @@ function ultimate_quick_view_for_woocommerce_deactivate()
 register_activation_hook(__FILE__, 'ultimate_quick_view_for_woocommerce_activate');
 register_deactivation_hook(__FILE__, 'ultimate_quick_view_for_woocommerce_deactivate');
 
-require plugin_dir_path(__FILE__) . '/vendor/autoload.php';
+// require plugin_dir_path(__FILE__) . '/vendor/autoload.php';
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
