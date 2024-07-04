@@ -35,8 +35,8 @@ return (
                                 content: __('Enjoyed Ultimate Quick View for WooCommerce ? Please leave us a rating. We really appreciate your support!', 'store-banner'),
                                 btn: [
                                     {
-                                        'url': '#',
-                                        'title': __('Create New Page', 'store-banner'),
+                                        'url': '?page=ultimate-quick-view-for-woocommerce&path=settings',
+                                        'title': __('Settings', 'store-banner'),
                                         'className': 'theme-button-solid theme-button-solid-blue',
                                     },
                                     {

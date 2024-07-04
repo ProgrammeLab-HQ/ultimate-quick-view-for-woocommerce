@@ -106,7 +106,7 @@ export default function Settings(props) {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "light",
+                    theme: "colored",
                     // transition: Bounce,
                 });
             }
@@ -135,7 +135,7 @@ export default function Settings(props) {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: "light",
+                    theme: "colored",
                     // transition: Bounce,
                 });
             }

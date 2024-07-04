@@ -36,6 +36,7 @@ import {
 } from "react-router-dom";
 
 
+import Footer from './Organisms/Footer';
 import Header from './Organisms/Header';
 import Elements from './Pages/Elements';
 import Home from './Pages/Home';
@@ -63,6 +64,7 @@ export default function App() {
     <Router basename='/wp-admin/admin.php'>
         <Header />
         <LoadSettingsPages />
+        <Footer/>
     </Router>
   );
 }

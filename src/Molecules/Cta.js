@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    NavLink
+} from "react-router-dom";
 export default function Cta(props) {
     // console.log(props);
     const {className, title, content, btn} = props.data;
@@ -25,7 +28,7 @@ export default function Cta(props) {
                         btn && btn.length && 
                         <div className="btn-group">
                             {btn.map((item, index) => (
-                                <a 
+                                <NavLink 
                                 className={
                                     [
                                         'theme-button',
@@ -33,8 +36,8 @@ export default function Cta(props) {
                                     ].join(" ")
                                 }
                                 key={index} 
-                                href={item.url} 
-                                target="_blank">{item.title}</a>
+                                to={item.url} 
+                                >{item.title}</NavLink>
                             ))} 
                         </div>
                     }

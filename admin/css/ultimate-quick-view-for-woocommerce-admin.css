@@ -614,6 +614,12 @@
   vertical-align: top;
   content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.16406 10H15.8307" stroke="%230167FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 4.16602L15.8333 9.99935L10 15.8327" stroke="%230167FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
+.ultimate-quick-view-for-woocommerce-settings-template #wpwrap #wpcontent #wpbody #wpbody-content .ultimate-quick-view-for-woocommerce-settings-wrapper .ultimate-quick-view-for-woocommerce-settings-container .ultimate-quick-view-for-woocommerce-footer {
+  margin-top: 30px;
+  color: #757575;
+  font-size: 14px;
+  line-height: 20px;
+}
 .ultimate-quick-view-for-woocommerce-settings-template #wpwrap #wpfooter {
   display: none !important;
 }/*# sourceMappingURL=ultimate-quick-view-for-woocommerce-admin.css.map */
