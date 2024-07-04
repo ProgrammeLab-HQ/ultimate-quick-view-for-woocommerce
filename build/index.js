@@ -8058,7 +8058,7 @@ function Settings(props) {
       // alert('Options saved successfully!');            
       var toastId = 'uqvfw-toast-id';
       if (!react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.isActive(toastId)) {
-        react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.success((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Changes applied successfully.", 'ultimate-quick-view-for-woocommerce'), {
+        react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.success((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Changes applied.", 'ultimate-quick-view-for-woocommerce'), {
           toastId: toastId,
           position: "top-right",
           autoClose: 5000,
@@ -8090,7 +8090,7 @@ function Settings(props) {
               // alert('Options saved successfully!');            
               var toastId = 'uqvfw-toast-id';
               if (!react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.isActive(toastId)) {
-                react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.success((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Changes applied successfully.", 'ultimate-quick-view-for-woocommerce'), {
+                react_toastify__WEBPACK_IMPORTED_MODULE_4__.toast.success((0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Changes applied.", 'ultimate-quick-view-for-woocommerce'), {
                   toastId: toastId,
                   position: "top-right",
                   autoClose: 5000,
@@ -8143,12 +8143,8 @@ function Settings(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("ul", {
     className: "options-menu d-flex flex-column"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("a", {
-    href: "#",
     className: "ultimate-quick-view-for-woocommerce-nav-tab nav-tab-active"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Quick View', 'ultimate-quick-view-for-woocommerce'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("a", {
-    href: "#",
-    className: "ultimate-quick-view-for-woocommerce-nav-tab"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Settings', 'ultimate-quick-view-for-woocommerce'))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("div", {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Quick View', 'ultimate-quick-view-for-woocommerce'))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("div", {
     className: "options-area d-flex flex-column"
   }, loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default().createElement("div", {
     className: "page-loader"

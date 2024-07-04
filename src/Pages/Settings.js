@@ -97,7 +97,7 @@ export default function Settings(props) {
             // alert('Options saved successfully!');            
             const toastId = 'uqvfw-toast-id';
             if (!toast.isActive(toastId)) {
-                toast.success(__("Changes applied successfully.", 'ultimate-quick-view-for-woocommerce'), {
+                toast.success(__("Changes applied.", 'ultimate-quick-view-for-woocommerce'), {
                     toastId,
                     position: "top-right",
                     autoClose: 5000,
@@ -126,7 +126,7 @@ export default function Settings(props) {
             // alert('Options saved successfully!');            
             const toastId = 'uqvfw-toast-id';
             if (!toast.isActive(toastId)) {
-                toast.success(__("Changes applied successfully.", 'ultimate-quick-view-for-woocommerce'), {
+                toast.success(__("Changes applied.", 'ultimate-quick-view-for-woocommerce'), {
                     toastId,
                     position: "top-right",
                     autoClose: 5000,
@@ -163,11 +163,11 @@ export default function Settings(props) {
                                     <div className="nav-area">
                                         <ul className="options-menu d-flex flex-column">
                                             <li>
-                                                <a href="#" className="ultimate-quick-view-for-woocommerce-nav-tab nav-tab-active">{__('Quick View', 'ultimate-quick-view-for-woocommerce')}</a>
+                                                <a className="ultimate-quick-view-for-woocommerce-nav-tab nav-tab-active">{__('Quick View', 'ultimate-quick-view-for-woocommerce')}</a>
                                             </li>
-                                            <li>
+                                            {/* <li>
                                                 <a href="#" className="ultimate-quick-view-for-woocommerce-nav-tab">{__('Settings', 'ultimate-quick-view-for-woocommerce')}</a>
-                                            </li>
+                                            </li> */}
                                         </ul>
                                     </div>
                                     <div className="options-area d-flex flex-column"> 
