@@ -27,18 +27,33 @@ export default function Cta(props) {
                     {
                         btn && btn.length && 
                         <div className="btn-group">
-                            {btn.map((item, index) => (
-                                <NavLink 
-                                className={
-                                    [
-                                        'theme-button',
-                                        (item.className) ? item.className : ''
-                                    ].join(" ")
-                                }
-                                key={index} 
-                                to={item.url} 
-                                >{item.title}</NavLink>
-                            ))} 
+                            {btn.map((item, index) => {
+                                return (item.target == '_blank')?
+                                (
+                                    <a 
+                                    className={
+                                        [
+                                            'theme-button',
+                                            (item.className) ? item.className : ''
+                                        ].join(" ")
+                                    }
+                                    key={index} 
+                                    href={item.url} 
+                                    target="_blank">{item.title}</a>
+                                ) : (
+                                    <NavLink 
+                                    className={
+                                        [
+                                            'theme-button',
+                                            (item.className) ? item.className : ''
+                                        ].join(" ")
+                                    }
+                                    key={index} 
+                                    to={item.url} 
+                                    >{item.title}</NavLink>
+                                )
+                                
+                            })} 
                         </div>
                     }
                 </div>

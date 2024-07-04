@@ -40,8 +40,9 @@ return (
                                         'className': 'theme-button-solid theme-button-solid-blue',
                                     },
                                     {
-                                        'url': '#',
-                                        'title': __('Visit Our Website', 'store-banner')
+                                        'url': 'https://www.programmelab.com/',
+                                        'title': __('Visit Our Website', 'store-banner'),
+                                        'target': '_blank'
                                     },
                                 ]
                             }

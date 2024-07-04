@@ -7353,7 +7353,12 @@ function Cta(props) {
   }, btn && btn.length && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "btn-group"
   }, btn.map(function (item, index) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
+    return item.target == '_blank' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      className: ['theme-button', item.className ? item.className : ''].join(" "),
+      key: index,
+      href: item.url,
+      target: "_blank"
+    }, item.title) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.NavLink, {
       className: ['theme-button', item.className ? item.className : ''].join(" "),
       key: index,
       to: item.url
@@ -7742,8 +7747,9 @@ function Home() {
           'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'store-banner'),
           'className': 'theme-button-solid theme-button-solid-blue'
         }, {
-          'url': '#',
-          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Visit Our Website', 'store-banner')
+          'url': 'https://www.programmelab.com/',
+          'title': (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Visit Our Website', 'store-banner'),
+          'target': '_blank'
         }]
       }
     }
