@@ -7525,15 +7525,11 @@ function Header() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
     fluid: "fluid",
     src: _assets_images_icon_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-    alt: _data_json__WEBPACK_IMPORTED_MODULE_4__.name + ' - Logo',
-    width: "59",
-    height: "42"
+    alt: _data_json__WEBPACK_IMPORTED_MODULE_4__.name + ' - Icon'
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
     fluid: "fluid",
     src: _assets_images_logo_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
-    alt: "Programme-lab-Logo",
-    width: "176",
-    height: "36"
+    alt: _data_json__WEBPACK_IMPORTED_MODULE_4__.name + ' - Logo'
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(HeaderLeftNav, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
     className: "col-lg-4 right-header text-center text-lg-end"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("ul", {

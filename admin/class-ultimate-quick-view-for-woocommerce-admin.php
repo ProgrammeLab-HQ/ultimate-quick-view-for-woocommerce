@@ -239,8 +239,8 @@ class Ultimate_Quick_View_For_Woocommerce_Admin
 	public function ultimate_quick_view_for_woocommerce_admin_menu()
 	{
 		add_menu_page(
-			esc_html__('Quick View', 'ultimate-quick-view-for-woocommerce'),
 			esc_html('Quick View', 'ultimate-quick-view-for-woocommerce'),
+			sprintf(esc_html__('Ultimate %1$s Quick View', 'ultimate-quick-view-for-woocommerce'), '<br />'),
 			'manage_options',
 			$this->plugin_name,
 			array($this, 'ultimate_quick_view_for_woocommerce_dashboard_page_html'),

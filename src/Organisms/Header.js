@@ -29,8 +29,8 @@ export default function Header() {
                     <Row className="align-items-center">
                         <Col className="col-lg-8 left-header">
                             <div className="d-flex flex-column flex-lg-row align-items-center">
-                                <Image fluid="fluid" src={Icon} alt={data.name + ' - Logo'} width="59" height="42"/>
-                                <Image fluid="fluid" src={Logo} alt="Programme-lab-Logo" width="176" height="36"/>
+                                <Image fluid="fluid" src={Icon} alt={data.name + ' - Icon'}/>
+                                <Image fluid="fluid" src={Logo} alt={data.name + ' - Logo'}/>
                                 <HeaderLeftNav />                                
                             </div>
                         </Col>
