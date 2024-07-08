@@ -40,40 +40,62 @@
 .products .product .programmelab-quickview-opener-wrapper,
 .products-block-post-template .product .programmelab-quickview-opener-wrapper {
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
-.programmelab-quickview-dialog.modal {
+.blocker {
+  z-index: 9;
+}
+.blocker .programmelab-quickview-dialog {
   max-width: 1000px;
   padding: 25px;
 }
-.programmelab-quickview-dialog.modal .quickview-full-details-button {
+.blocker .programmelab-quickview-dialog .single-product .product {
+  z-index: 9;
+}
+.blocker .programmelab-quickview-dialog .single-product .product .quickview-full-details-button {
   width: 100%;
   text-align: center;
 }
-.programmelab-quickview-dialog.modal .quickview-cart-button-wrap {
+.blocker .programmelab-quickview-dialog .single-product .product .quickview-cart-button-wrap {
   margin-bottom: 1.618em;
   padding: 1em 0;
 }
-.programmelab-quickview-dialog.modal .woocommerce-product-gallery {
+.blocker .programmelab-quickview-dialog .single-product .product .woocommerce-product-gallery {
   margin-bottom: 0 !important;
+  float: left;
+  width: 48%;
 }
-.programmelab-quickview-dialog.modal .flex-control-thumbs {
+.blocker .programmelab-quickview-dialog .single-product .product .flex-control-thumbs {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   margin-top: 10px !important;
   margin-bottom: 10px !important;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.programmelab-quickview-dialog.modal .flex-control-thumbs li {
+.blocker .programmelab-quickview-dialog .single-product .product .flex-control-thumbs li {
   margin-bottom: 0 !important;
 }
-.programmelab-quickview-dialog.modal .flex-control-thumbs li img {
+.blocker .programmelab-quickview-dialog .single-product .product .flex-control-thumbs li img {
   width: 100%;
   height: auto;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
 }
-.programmelab-quickview-dialog.modal .flex-control-thumbs li.active img {
+.blocker .programmelab-quickview-dialog .single-product .product .flex-control-thumbs li.active img {
   opacity: 1 !important;
 }
-.programmelab-quickview-dialog.modal .flex-control-thumbs::before {
+.blocker .programmelab-quickview-dialog .single-product .product .flex-control-thumbs::before {
   display: none !important;
+}
+
+.fancybox__container [type=button],
+.fancybox__container [type=submit],
+.fancybox__container button {
+  border-style: none;
+  background-color: transparent !important;
 }/*# sourceMappingURL=ultimate-quick-view-for-woocommerce-public.css.map */

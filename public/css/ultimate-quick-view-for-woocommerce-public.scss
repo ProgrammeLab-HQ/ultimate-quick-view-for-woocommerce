@@ -36,43 +36,68 @@
     }
     .programmelab-quickview-opener-wrapper {
       margin-bottom: 5px;
+      margin-top: 5px;
     }
   }
 }
-.programmelab-quickview-dialog.modal {
-  max-width: 1000px;
-  padding: 25px;
-  .quickview-full-details-button {
-    width: 100%;
-    text-align: center;
-  }
-  .quickview-cart-button-wrap {
-    margin-bottom: 1.618em;
-    padding: 1em 0;
-  }
-  .woocommerce-product-gallery {
-    margin-bottom: 0 !important;
-  }
-  .flex-control-thumbs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-    li {
-      margin-bottom: 0 !important;
-      img {
-        width: 100%;
-        height: auto;
-      }
-      &.active {
-        img {
-          opacity: 1 !important;
+.blocker {
+  z-index: 9;
+  .programmelab-quickview-dialog {
+    max-width: 1000px;
+    padding: 25px;
+    .single-product {
+      .product {
+        z-index: 9;
+        .quickview-full-details-button {
+          width: 100%;
+          text-align: center;
+        }
+        .quickview-cart-button-wrap {
+          margin-bottom: 1.618em;
+          padding: 1em 0;
+        }
+        .woocommerce-product-gallery {
+          margin-bottom: 0 !important;
+          float: left;
+          width: 48%;
+        }
+        .flex-control-thumbs {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 10px;
+          margin-top: 10px !important;
+          margin-bottom: 10px !important;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li {
+            margin-bottom: 0 !important;
+            img {
+              width: 100%;
+              height: auto;
+              cursor: pointer;
+              display: inline-block;
+              vertical-align: top;
+            }
+            &.active {
+              img {
+                opacity: 1 !important;
+              }
+            }
+          }
+          &::before {
+            display: none !important;
+          }
         }
       }
     }
-    &::before {
-      display: none !important;
-    }
+  }
+}
+.fancybox__container {
+  [type="button"],
+  [type="submit"],
+  button {
+    border-style: none;
+    background-color: transparent !important;
   }
 }

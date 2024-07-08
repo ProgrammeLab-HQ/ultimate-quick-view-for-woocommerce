@@ -18,10 +18,11 @@ jQuery(document).ready(function($) {
                 _this.html('Loading...');
             },
             success: function( response ){
+                console.log(response);
                 data = $.parseJSON(response);
                 if(data.success){
                     $( ".programmelab-quickview-dialog" ).html(data.html);
-                    $( ".programmelab-quickview-dialog" ).modal({
+                    $( ".programmelab-quickview-dialog" ).jmodal({
                         // fadeDuration: 1000,
                         // fadeDelay: 0.50
                         // 

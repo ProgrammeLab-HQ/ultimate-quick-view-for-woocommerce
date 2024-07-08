@@ -76,7 +76,7 @@ class Ultimate_Quick_View_For_Woocommerce_Public
 		 */
 
 
-		wp_enqueue_style($this->plugin_name . '-jquery-modal', ULTIMATE_QUICK_VIEW_FOR_WOOCOMMERCE_PATH  . 'assets/plugins/jquery-modal/jquery.modal.min.css', array(), $this->version, 'all');
+		wp_enqueue_style($this->plugin_name . '-jquery-modal', ULTIMATE_QUICK_VIEW_FOR_WOOCOMMERCE_PATH  . 'assets/plugins/jquery-modal/jquery.modal.css', array(), $this->version, 'all');
 
 		wp_enqueue_style($this->plugin_name . '-fancyapps', ULTIMATE_QUICK_VIEW_FOR_WOOCOMMERCE_PATH  . 'assets/plugins/fancybox/fancybox.css', array(), $this->version, 'all');
 
@@ -104,7 +104,7 @@ class Ultimate_Quick_View_For_Woocommerce_Public
 		 *
 		 */
 
-		wp_enqueue_script($this->plugin_name . '-jquery-modal', ULTIMATE_QUICK_VIEW_FOR_WOOCOMMERCE_PATH  . 'assets/plugins/jquery-modal/jquery.modal.min.js', array('jquery'), $this->version, false);
+		wp_enqueue_script($this->plugin_name . '-jquery-modal', ULTIMATE_QUICK_VIEW_FOR_WOOCOMMERCE_PATH  . 'assets/plugins/jquery-modal/jquery.modal.js', array('jquery'), $this->version, false);
 
 		wp_enqueue_script($this->plugin_name . '-fancyapps', ULTIMATE_QUICK_VIEW_FOR_WOOCOMMERCE_PATH  . 'assets/plugins/fancybox/fancybox.umd.js', array('jquery'), $this->version, false);
 
@@ -153,13 +153,19 @@ class Ultimate_Quick_View_For_Woocommerce_Public
 		}
 		add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_close', 12);
 		add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_link_open', 13);
-
+		$quick_view_button_position = 9;
+		// $current_theme = wp_get_theme();
+		// var_dump(get_option('stylesheet'));
+		if (get_option('stylesheet') == 'astra' || get_option('stylesheet') == 'oceanwp') {
+			$quick_view_button_position = 9999;
+		}
+		// Change the quickview button position below the add to cart button 9 to 11
 		add_action('woocommerce_after_shop_loop_item', function () {
 			global $product;
 			$show = $this->ultimate_quick_view_for_woocommerce_enable_quickview($product->get_id());
 			// var_dump($show);
-			if ($show)	echo '<div class="programmelab-quickview-opener-wrapper"><button class="programmelab-quickview-opener" data-product_id="' . esc_html($product->get_id()) . '">' . esc_html__('Quick View', 'ultimate-quick-view-for-woocommerce') . '</button></div>';
-		}, 9);
+			if ($show)	echo '<div class="programmelab-quickview-opener-wrapper wp-block-button wc-block-components-product-button  is-style-fill  align-center"><button class="button wp-block-button__link wp-element-button wc-block-components-product-button__button has-font-size has-x-small-font-size has-text-align-center wc-interactive programmelab-quickview-opener" data-product_id="' . esc_html($product->get_id()) . '">' . esc_html__('Quick View', 'ultimate-quick-view-for-woocommerce') . '</button></div>';
+		}, $quick_view_button_position);
 		add_action('woocommerce_after_main_content', function () {
 			global $product;
 			echo '<div class="programmelab-quickview-dialog" style="display: none">Loading...</div>';
